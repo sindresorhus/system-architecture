@@ -1,6 +1,6 @@
 {
 	"name": "system-architecture",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Get the operating system CPU architecture",
 	"license": "MIT",
 	"repository": "sindresorhus/system-architecture",
