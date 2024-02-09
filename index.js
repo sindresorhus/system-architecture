@@ -9,7 +9,7 @@ export async function systemArchitecture() {
 
 	// Detect Node.js x64 binary running under Rosetta 2 on a ARM64 Mac.
 	if (platform === 'darwin' && arch === 'x64') {
-		const {stdout} = await execFilePromises('sysctl', ['-inq', 'sysctl.proc_translated'], {encoding: 'utf8'});
+		const {stdout} = await execFilePromises('sysctl', ['-inq', 'sysctl.proc_translated']);
 		return stdout.trim() === '1' ? 'arm64' : 'x64';
 	}
 
@@ -22,7 +22,7 @@ export async function systemArchitecture() {
 	}
 
 	if (platform === 'linux') {
-		const {stdout} = await execFilePromises('getconf', ['LONG_BIT'], {encoding: 'utf8'});
+		const {stdout} = await execFilePromises('getconf', ['LONG_BIT']);
 		if (stdout.trim() === '64') {
 			return 'x64';
 		}
