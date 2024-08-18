@@ -1,6 +1,6 @@
 {
 	"name": "system-architecture",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "Get the operating system CPU architecture",
 	"license": "MIT",
 	"repository": "sindresorhus/system-architecture",
@@ -19,7 +19,6 @@
 	"engines": {
 		"node": ">=18"
 	},
-	"sideEffects": false,
 	"scripts": {
 		"test": "xo && ava"
 	},
